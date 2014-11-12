@@ -1,0 +1,82 @@
+
+<!-- <?xml version="1.0" encoding="UTF-8" ?> -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<title>Security Events</title>
+	<link rel="stylesheet" href="css/style.css" media="screen" />
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.dimensions.js"></script>
+	<script type="text/javascript" src="js/ui.mouse.js"></script>
+	<script type="text/javascript" src="js/ui.sortable.js"></script>
+	<script type="text/javascript" src="js/ui.sortable.ext.js"></script>
+	<script type="text/javascript" src="js/dashboard.js"></script>	
+	<script language="javascript" type="text/javascript" src="js/jquery.flot.js"></script>
+    <script language="javascript" type="text/javascript" src="js/jquery.flot.pie.js"></script>
+	<script type="text/javascript">
+		$(function () {
+		var data = [];
+			var series = ["Positive","Negative","Neutral"];
+			for( var i = 0; i<3; i++)
+			{
+				data[i] = { label: series[i], data: Math.floor(Math.random()*100)+1 }
+			}
+			$.plot($("#interactive"), data, 
+			{
+				series: {
+					pie: { 
+						show: true
+					}
+				},
+				grid: {
+					hoverable: true,
+					clickable: true
+				}
+			});
+			$("#interactive").bind("plothover", pieHover);
+			$("#interactive").bind("plotclick", pieClick);
+		});
+	</script>
+	<style type="text/css">
+		div.graph
+		{
+			width: 400px;
+			height: 300px;
+			float: left;
+			border: 1px dashed gainsboro;
+			margin-left:400px;
+			margin-top:50px;
+		}
+	</style>
+</head>
+<body>	
+	<div class="page">
+		<div class="header">
+			<div class="logo1"><img class="logo1" src="img/bits-logo-small.jpg" /></div>			
+			<div class="bannertxt"><h1>Security Events Dashboard</h1></div>
+			<div class="logo2"><img class="logo2" src="img/cognizant-logo.jpg" /></div>
+			<div class="nav">
+				<ul class="nav">
+					<li><a href="index.html">Home</a></li>
+					<li class="active"><a href="#">Attacks Detection</a></li>
+					<li><a href="settings.html">Settings</a></li>										
+				</ul>
+			</div>
+		</div>
+		<div class="body" style="z-index:999;">
+			<div class="content">
+				<div class="main">
+					<div id="interactive" class="graph"></div>
+					<!-- <div class="segment" rel="1">
+						<h2 class="title">Interactive</h2>
+						<p class="description">Customer Satisfaction graph</p>						
+						 
+						<div id="hover"></div>  -->
+					</div>					
+				</div>
+				
+			</div>			
+		</div>
+	</div>
+</body>
+</html>

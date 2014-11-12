@@ -1,0 +1,244 @@
+
+<!-- <?xml version="1.0" encoding="UTF-8" ?> -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<title>Dashboard</title>
+	<link rel="stylesheet" href="css/style.css" media="screen" />
+	<link rel="stylesheet" href="css/jquery.ui.all.css" />
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.dimensions.js"></script>
+	<script type="text/javascript" src="js/ui.mouse.js"></script>
+	<script type="text/javascript" src="js/ui.sortable.js"></script>
+	<script type="text/javascript" src="js/ui.sortable.ext.js"></script>
+	<script type="text/javascript" src="js/dashboard.js"></script>
+	<script type="text/javascript" src="js/jquery.ui.core.js"></script>
+	<script type="text/javascript" src="js/jquery.ui.widget.js"></script>
+	<script type="text/javascript" src="js/jquery.ui.accordion.js"></script>
+	<script>
+	$(function() {
+		$( "#accordion" ).accordion();
+	});
+	</script>
+</head>
+<body>	
+	<div class="page">
+		<div class="header">
+			<div class="logo1"><img class="logo1" src="img/bits-logo-small.jpg" /></div>			
+			<div class="bannertxt"><h1>Security Events Dashboard</h1></div>
+			<div class="logo2"><img class="logo2" src="img/cognizant-logo.jpg" /></div>
+			<div class="nav">
+				<ul class="nav">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="attacks.html">Attacks Detection</a></li>
+					<li class="active"><a href="#">Settings</a></li>
+					<!-- <li class="na"><a href=""><img src="img/add_tab.png" alt="Add a tab" /></a></li> -->
+				</ul>
+			</div>
+		</div>
+		<div class="body">
+			<div class="content">
+				<div class="main">
+					<div class="demo" style="width: 800px;padding-left: 175px;padding-top: 50px;">
+					<div id="accordion">
+						<h3><a href="#">Profile Management</a></h3>
+						<div>
+							<table style="width:100%;height:100%;" cellspacing="10px">
+								<tr>
+									<td colspan="2">
+										<label style="font-weight:bold;font-size:14px;font-family:arial;">
+											CALL RECORDING INFORMATION
+										</label>
+									</td>
+								</tr>
+								<tr><td><div style="height:10px;"/>	</td></tr>
+								<tr>
+									<td>
+										<label>
+											Region:
+										</label>
+									</td>
+									<td>
+										<select style="width:260px;">
+											<option selected>Please Enter your Region	</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+										<td>
+											<label>File Format:</label>
+										</td>
+										<td>
+											<select style="width:260px;">
+												<option selected>Please select a audio file format</option>
+											</select>
+										</td>
+								</tr>
+								<tr>
+									<td>
+										<label>Type of Call</label>
+									</td>
+									<td>
+										<select style="width:260px;">
+											<option selected>Please select the type of call</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<label>Schedule</label>
+									</td>
+									<td>
+										<select style="width:260px;">
+											<option selected>Please select the Schedule interval	</option>
+										</select>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<h3><a href="#">Customer Satisfaction</a></h3>
+						<div>
+							<table style="width:70%;height:70%;" cellspacing="0px">
+								<tr>
+									<td colspan="3">
+										<label style="font-weight:bold;font-size:14px;font-family:arial;">
+											LEXICON INFORMATION
+										</label>
+									</td>
+								</tr>								
+								<tr>
+									<td>
+										<label>
+											List of Positive Lexicons:
+										</label>
+									</td>
+									<td>
+										<input type="text"/>
+									</td>
+									<td>
+										<a href="#" style="text-decoration:none;font-weight:bold;font-family:arial;font-size:12px;">ADD</a>
+									</td>
+								</tr>
+								<tr>
+										<td>
+											<label>
+												List of Negative Lexicons:
+											</label>
+										</td>
+										<td>
+											<input type="text"/>
+										</td>
+										<td>
+											<a href="#" style="text-decoration:none;font-weight:bold;font-family:arial;font-size:12px;">ADD</a>
+										</td>
+								</tr>								
+							</table>
+						</div>
+						<h3><a href="#">Script Adherence</a></h3>
+						<div>
+							<table style="width:100%;height:100%;border:1;" cellspacing="0px">
+								<tr style="height:30px;">
+									<td>
+										<label style="font-weight:bold;font-size:14px;font-family:arial;">
+											GREETING
+										</label>
+									</td>
+									<td>
+										<label style="font-weight:bold;font-size:14px;font-family:arial;">
+											INTRODUCTION
+										</label>
+									</td>
+									<td>
+										<label style="font-weight:bold;font-size:14px;font-family:arial;">
+											BODY OF CALL
+										</label>
+									</td>
+									<td>
+										<label style="font-weight:bold;font-size:14px;font-family:arial;">
+											CLOSING
+										</label>
+									</td>
+								</tr>								
+								<tr>
+									<td>
+										<textarea style="width:90%;height:100%;"></textarea>
+									</td>
+									<td>
+										<textarea style="width:90%;height:100%;"></textarea>
+									</td>
+									<td>
+										<textarea style="width:90%;height:100%;"></textarea>
+									</td>
+									<td>
+										<textarea style="width:90%;height:100%;"></textarea>
+									</td>
+								</tr>																
+							</table>
+						</div>
+						<h3><a href="#">Average Handling Time</a></h3>
+						<div>
+							<table style="width:50%;height:50%;border:1;" cellspacing="0px">
+								<tr style="height:30px;">
+									<td colspan="2">
+										<label style="font-weight:bold;font-size:14px;font-family:arial;">
+											SLA LEVEL FOR THE CALL
+										</label>
+									</td>					
+								</tr>
+								<tr>
+									<td>
+										<label>Minutes:
+									</td>
+									<td>
+										<select style="width:40px;">
+											<option selected>1</option>
+											<option >2</option>
+											<option >3</option>
+											<option >4</option>
+											<option >5</option>
+											<option >6</option>
+											<option >7</option>
+											<option >8</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<label>Seconds:
+									</td>
+									<td>
+										<select style="width:40px;">
+											<option selected>1</option>
+											<option >2</option>
+											<option >3</option>
+											<option >4</option>
+											<option >5</option>
+											<option >6</option>
+											<option >7</option>
+											<option >8</option>
+										</select>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+
+					</div><!-- End demo -->
+
+					<div class="demo-description" style="display: none; ">
+					<p>
+					Click headers to expand/collapse content that is broken into logical sections, much like tabs.
+					Optionally, toggle sections open/closed on mouseover.
+					</p>
+					<p>
+					The underlying HTML markup is a series of headers (H3 tags) and content divs so the content is
+					usable without JavaScript.
+					</p>
+					</div>
+				</div>
+				<!-- <a href="#" style="text-decoration:none;font-weight:bold;font-family:arial;font-size:12px;padding-left: 275px;">SUBMIT</a> -->
+			</div>			
+		</div>
+	</div>
+</body>
+</html>
